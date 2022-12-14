@@ -17,6 +17,20 @@
   ],
   "main": "./out/src/extension",
   "contributes": {
+    "commands": [
+      {
+        "command": "gluon.restart",
+        "title": "Restart Gluon Language Server"
+      },
+      {
+        "command": "gluon.shutdown",
+        "title": "Shutdown Gluon Language Server"
+      },
+      {
+        "command": "gluon.start",
+        "title": "Start Gluon Language Server"
+      }
+    ],
     "languages": [
       {
         "id": "gluon",
