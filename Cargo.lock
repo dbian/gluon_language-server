@@ -526,8 +526,6 @@ dependencies = [
 [[package]]
 name = "gluon"
 version = "0.18.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "815cb7fe84b8278a2286dc0c048f2e0be8af091165ca2ee16af5407b6d1aa884"
 dependencies = [
  "async-trait",
  "codespan",
@@ -596,8 +594,6 @@ dependencies = [
 [[package]]
 name = "gluon_base"
 version = "0.18.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6e4b9ee3c698fe1e6f2a18acab0af7a6a274dad3208b43aaaf3a7b21314538e3"
 dependencies = [
  "anymap",
  "bitflags",
@@ -625,8 +621,6 @@ dependencies = [
 [[package]]
 name = "gluon_check"
 version = "0.18.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "90c27886f2c2a80f65568882c117f713f24c7a33ae270675e9b1fdde0e012daa"
 dependencies = [
  "codespan",
  "codespan-reporting",
@@ -646,8 +640,6 @@ dependencies = [
 [[package]]
 name = "gluon_codegen"
 version = "0.18.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2c2e57211f61c6175bf382b3fd9476ea5ecef215fdd600a8221335dae0cedaa0"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -657,8 +649,6 @@ dependencies = [
 [[package]]
 name = "gluon_completion"
 version = "0.18.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "111a9bc22b3c1798dff964abc650283ca5094fdcef9ae787c0b0accbb72b3226"
 dependencies = [
  "codespan",
  "either",
@@ -670,8 +660,6 @@ dependencies = [
 [[package]]
 name = "gluon_format"
 version = "0.18.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e43b938ffdcff454a0148343d360a1bc1a0f172b078a0cc2398001978a47aa8d"
 dependencies = [
  "codespan",
  "gluon_base",
@@ -713,8 +701,6 @@ dependencies = [
 [[package]]
 name = "gluon_parser"
 version = "0.18.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9fd7a7eddf1f62fdc81af7bbd5093065feeb4726a3568ad2d1694ead5997737f"
 dependencies = [
  "codespan",
  "codespan-reporting",
@@ -731,8 +717,6 @@ dependencies = [
 [[package]]
 name = "gluon_vm"
 version = "0.18.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3337ce8f9eba601f11c2e05aa7f61e16a18b4bb198875134482527c3ce8482c2"
 dependencies = [
  "async-trait",
  "bitflags",

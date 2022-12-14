@@ -39,18 +39,23 @@ serde_derive = "1.0.0"
 lsp-types = "0.88.0"
 debugserver-types = "0.5.0"
 
-gluon = { version = "0.18.1", features = ["serialization", "regex", "rand", "web"] }
+gluon = { version = "0.18.1", features = [
+    "serialization",
+    "regex",
+    "rand",
+    "web",
+] }
 gluon_completion = "0.18.0"
 gluon_format = "0.18.0"
 
 [dev-dependencies]
 pretty_assertions = "1.0.0"
 
-# [patch.crates-io]
-# gluon_base = { path = "../gluon/base" }
-# gluon_parser = { path = "../gluon/parser" }
-# gluon_check = { path = "../gluon/check" }
-# gluon_format = { path = "../gluon/format" }
-# gluon_completion = { path = "../gluon/completion" }
-# gluon_vm = { path = "../gluon/vm" }
-# gluon = { path = "../gluon" }
+[patch.crates-io]
+gluon_base = { path = "../gluon-master/base" }
+gluon_parser = { path = "../gluon-master/parser" }
+gluon_check = { path = "../gluon-master/check" }
+gluon_format = { path = "../gluon-master/format" }
+gluon_completion = { path = "../gluon-master/completion" }
+gluon_vm = { path = "../gluon-master/vm" }
+gluon = { path = "../gluon-master" }

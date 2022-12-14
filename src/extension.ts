@@ -71,7 +71,48 @@ export function activate(context: ExtensionContext) {
     // Create the language client and start the client.
     client = new LanguageClient('gluon', serverOptions, clientOptions);
     client.start();
+    // 注册命令
+    let disposable_stop = vscode.commands.registerCommand('gluon.shutdown', () => {
+        client.sendNotification('exit').then(() => {
+            client.stop().then(() => {
+                client = null;
+                vscode.window.showInformationMessage('gluon language server has been shutdown');
+            });
+        });
 
+    });
+
+    context.subscriptions.push(disposable_stop);
+    let disposable_start = vscode.commands.registerCommand('gluon.start', () => {
+        if (client) {
+            vscode.window.showInformationMessage('gluon language server has already been started');
+            return;
+        }
+        client.start();
+        vscode.window.showInformationMessage('gluon language server has been started');
+
+    });
+    // restart
+    let disposable_restart = vscode.commands.registerCommand('gluon.restart', () => {
+        if (client) {
+            client.sendNotification('exit').then(() => {
+                client.stop().then(() => {
+                    client = null;
+                    vscode.window.showInformationMessage('gluon language server has been shutdown');
+                    client.start();
+
+                    vscode.window.showInformationMessage('gluon language server has been started');
+                });
+            });
+        } else {
+            client.start();
+            vscode.window.showInformationMessage('gluon language server has been started');
+        }
+    });
+    context.subscriptions.push(disposable_restart);
+
+
+    context.subscriptions.push(disposable_start);
     // Push the disposable to the context's subscriptions so that the 
     // client can be deactivated on extension deactivation
     // context.subscriptions.push(disposable);
